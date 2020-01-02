@@ -1,0 +1,19 @@
+= form_for @machine do |f|
+  - if @machine.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@machine.errors.count, "error")} prohibited this machine from being saved:"
+      %ul
+        - @machine.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :machine_name
+    = f.text_field :machine_name
+  .field
+    = f.label :machine_type
+    = f.collection_select :machine_type_id, MachineType.all, :id, :machine_type
+  .field
+    = f.label :out_of_order
+    = f.check_box :out_of_order
+  .actions
+    = f.submit 'Save'

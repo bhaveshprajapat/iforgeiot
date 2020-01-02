@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Machine type:
+  = @machine_type.machine_type
+%p
+  %b Description:
+  = @machine_type.description
+
+= link_to 'Edit', edit_machine_type_path(@machine_type)
+\|
+= link_to 'Back', machine_types_path

@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  machine_name: MyString
+  machine_type: one
+  out_of_order: false
+
+two:
+  machine_name: MyString
+  machine_type: two
+  out_of_order: false

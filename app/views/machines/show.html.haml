@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Machine name:
+  = @machine.machine_name
+%p
+  %b Machine type:
+  = @machine.machine_type
+%p
+  %b Out of order:
+  = @machine.out_of_order
+
+= link_to 'Edit', edit_machine_path(@machine)
+\|
+= link_to 'Back', machines_path

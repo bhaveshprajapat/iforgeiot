@@ -10,10 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_02_180221) do
+ActiveRecord::Schema.define(version: 2020_01_02_222152) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "machine_types", force: :cascade do |t|
+    t.string "machine_type"
+    t.string "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "machines", force: :cascade do |t|
+    t.string "machine_name"
+    t.bigint "machine_type_id", null: false
+    t.boolean "out_of_order"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["machine_type_id"], name: "index_machines_on_machine_type_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -28,4 +44,5 @@ ActiveRecord::Schema.define(version: 2020_01_02_180221) do
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
+  add_foreign_key "machines", "machine_types"
 end
