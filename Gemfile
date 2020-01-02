@@ -57,4 +57,6 @@ gem "pgcli-rails"
 gem "bootstrap_form", "~> 2.3"
 gem "bootstrap-sass", "~> 3.3"
 gem "font-awesome-rails"
+gem "devise"
+gem "devise_ldap_authenticatable"
 
