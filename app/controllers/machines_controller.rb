@@ -69,6 +69,6 @@ class MachinesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def machine_params
-      params.require(:machine).permit(:machine_name, :machine_type_id, :out_of_order)
+      params.require(:machine).permit(:machine_name, :machine_type_id, :out_of_order, :on_frequency, :off_frequency)
     end
 end

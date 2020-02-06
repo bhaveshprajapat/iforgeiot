@@ -11,9 +11,15 @@
     = f.text_field :machine_name
   .field
     = f.label :machine_type
-    = f.collection_select :machine_type_id, MachineType.all, :id, :machine_type
+    = f.text_field :machine_type
   .field
     = f.label :out_of_order
     = f.check_box :out_of_order
+  .field
+    = f.label :on_frequency
+    = f.number_field :on_frequency
+  .field
+    = f.label :off_frequency
+    = f.number_field :off_frequency
   .actions
     = f.submit 'Save'

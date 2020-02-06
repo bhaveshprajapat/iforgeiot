@@ -16,6 +16,8 @@ class MachinesTest < ApplicationSystemTestCase
 
     fill_in "Machine name", with: @machine.machine_name
     fill_in "Machine type", with: @machine.machine_type_id
+    fill_in "Off frequency", with: @machine.off_frequency
+    fill_in "On frequency", with: @machine.on_frequency
     check "Out of order" if @machine.out_of_order
     click_on "Create Machine"
 
@@ -29,6 +31,8 @@ class MachinesTest < ApplicationSystemTestCase
 
     fill_in "Machine name", with: @machine.machine_name
     fill_in "Machine type", with: @machine.machine_type_id
+    fill_in "Off frequency", with: @machine.off_frequency
+    fill_in "On frequency", with: @machine.on_frequency
     check "Out of order" if @machine.out_of_order
     click_on "Update Machine"
 

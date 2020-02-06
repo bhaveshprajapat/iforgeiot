@@ -17,7 +17,7 @@ class MachinesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create machine" do
     assert_difference('Machine.count') do
-      post machines_url, params: { machine: { machine_name: @machine.machine_name, machine_type_id: @machine.machine_type_id, out_of_order: @machine.out_of_order } }
+      post machines_url, params: { machine: { machine_name: @machine.machine_name, machine_type_id: @machine.machine_type_id, off_frequency: @machine.off_frequency, on_frequency: @machine.on_frequency, out_of_order: @machine.out_of_order } }
     end
 
     assert_redirected_to machine_url(Machine.last)
@@ -34,7 +34,7 @@ class MachinesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update machine" do
-    patch machine_url(@machine), params: { machine: { machine_name: @machine.machine_name, machine_type_id: @machine.machine_type_id, out_of_order: @machine.out_of_order } }
+    patch machine_url(@machine), params: { machine: { machine_name: @machine.machine_name, machine_type_id: @machine.machine_type_id, off_frequency: @machine.off_frequency, on_frequency: @machine.on_frequency, out_of_order: @machine.out_of_order } }
     assert_redirected_to machine_url(@machine)
   end
 

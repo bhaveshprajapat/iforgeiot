@@ -4,8 +4,12 @@ one:
   machine_name: MyString
   machine_type: one
   out_of_order: false
+  on_frequency: 1
+  off_frequency: 1
 
 two:
   machine_name: MyString
   machine_type: two
   out_of_order: false
+  on_frequency: 1
+  off_frequency: 1

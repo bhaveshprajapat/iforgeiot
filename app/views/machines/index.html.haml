@@ -1,11 +1,13 @@
 %h1 Listing machines
 
-%table.table.table-hover
+%table
   %thead
     %tr
       %th Machine name
       %th Machine type
       %th Out of order
+      %th On frequency
+      %th Off frequency
       %th
       %th
       %th
@@ -14,8 +16,10 @@
     - @machines.each do |machine|
       %tr
         %td= machine.machine_name
-        %td= machine.machine_type.machine_type
+        %td= machine.machine_type
         %td= machine.out_of_order
+        %td= machine.on_frequency
+        %td= machine.off_frequency
         %td= link_to 'Show', machine
         %td= link_to 'Edit', edit_machine_path(machine)
         %td= link_to 'Destroy', machine, method: :delete, data: { confirm: 'Are you sure?' }
