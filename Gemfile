@@ -64,5 +64,8 @@ gem "devise"
 gem "devise_ldap_authenticatable"
 gem 'bootswatch-rails'
 gem 'simple_form'
-
+gem 'capistrano-rvm'
+gem 'capistrano-bundler'
+gem "capistrano-rails"
+gem 'capistrano-thin', '~> 2.0.0'
 

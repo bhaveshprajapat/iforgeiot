@@ -1,4 +1,9 @@
 Rails.application.configure do
+
+  server "iforge.shef.ac.uk", :app, :web, :db, :primary => true
+  set :deploy_to, "/home/iforge/iot/rails"
+
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
