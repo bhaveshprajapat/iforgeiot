@@ -67,5 +67,5 @@ gem 'simple_form'
 gem 'capistrano-rvm'
 gem 'capistrano-bundler'
 gem "capistrano-rails"
-gem 'capistrano-thin', '~> 2.0.0'
+gem 'capistrano3-puma', github: "seuros/capistrano-puma"
 
