@@ -1,5 +1,9 @@
 Rails.application.configure do
-
+  
+  config.relative_url_root = "/iot"
+  config.action_controller.relative_url_root = "/iot"
+  ENV['RAILS_RELATIVE_URL_ROOT']  = "/iot"
+  ENV['ROOT_URL']  = "/iot"
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
