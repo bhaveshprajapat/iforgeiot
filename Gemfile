@@ -40,7 +40,17 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem "capistrano", "~> 3.11", require: false
+
+  gem 'capistrano'
+  gem 'capistrano-bundler'
+  gem 'capistrano-passenger', '>= 0.1.1'
+
+  # Remove the following if your app does not use Rails
+  gem 'capistrano-rails'
+
+  # Remove the following if your server does not use RVM
+  gem 'capistrano-rvm'
+
 end
 
 group :test do
@@ -64,8 +74,3 @@ gem "devise"
 gem "devise_ldap_authenticatable"
 gem 'bootswatch-rails'
 gem 'simple_form'
-gem 'capistrano-rvm'
-gem 'capistrano-bundler'
-gem "capistrano-rails"
-gem 'capistrano3-puma', github: "seuros/capistrano-puma"
-
