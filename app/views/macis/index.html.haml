@@ -1,0 +1,33 @@
+%h1 Listing macis
+
+%table
+  %thead
+    %tr
+      %th Maci name
+      %th Maci training
+      %th On freq
+      %th Off freq
+      %th Plug number
+      %th Remote number
+      %th Out of order
+      %th
+      %th
+      %th
+
+  %tbody
+    - @macis.each do |maci|
+      %tr
+        %td= maci.maci_name
+        %td= maci.maci_training
+        %td= maci.on_freq
+        %td= maci.off_freq
+        %td= maci.plug_number
+        %td= maci.remote_number
+        %td= maci.out_of_order
+        %td= link_to 'Show', maci
+        %td= link_to 'Edit', edit_maci_path(maci)
+        %td= link_to 'Destroy', maci, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Maci', new_maci_path

@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  maci_name: MyString
+  maci_training: MyString
+  on_freq: 1
+  off_freq: 1
+  plug_number: 1
+  remote_number: 1
+  out_of_order: false
+
+two:
+  maci_name: MyString
+  maci_training: MyString
+  on_freq: 1
+  off_freq: 1
+  plug_number: 1
+  remote_number: 1
+  out_of_order: false

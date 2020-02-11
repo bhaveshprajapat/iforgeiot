@@ -74,3 +74,4 @@ gem "devise"
 gem "devise_ldap_authenticatable"
 gem 'bootswatch-rails'
 gem 'simple_form'
+gem 'cgi'

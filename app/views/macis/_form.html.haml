@@ -1,0 +1,31 @@
+= form_for @maci do |f|
+  - if @maci.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@maci.errors.count, "error")} prohibited this maci from being saved:"
+      %ul
+        - @maci.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :maci_name
+    = f.text_field :maci_name
+  .field
+    = f.label :maci_training
+    = f.text_field :maci_training
+  .field
+    = f.label :on_freq
+    = f.number_field :on_freq
+  .field
+    = f.label :off_freq
+    = f.number_field :off_freq
+  .field
+    = f.label :plug_number
+    = f.number_field :plug_number
+  .field
+    = f.label :remote_number
+    = f.number_field :remote_number
+  .field
+    = f.label :out_of_order
+    = f.check_box :out_of_order
+  .actions
+    = f.submit 'Save'

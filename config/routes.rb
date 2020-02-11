@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :macis
   resources :machines
   resources :machine_types
   devise_for :users, skip: [:registrations]
@@ -6,4 +7,5 @@ Rails.application.routes.draw do
 
   resources :users	
   root "pages#home"
+  get 'getMachines/:ucard_number' => 'pages#getMachines'
 end

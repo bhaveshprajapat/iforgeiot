@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Maci name:
+  = @maci.maci_name
+%p
+  %b Maci training:
+  = @maci.maci_training
+%p
+  %b On freq:
+  = @maci.on_freq
+%p
+  %b Off freq:
+  = @maci.off_freq
+%p
+  %b Plug number:
+  = @maci.plug_number
+%p
+  %b Remote number:
+  = @maci.remote_number
+%p
+  %b Out of order:
+  = @maci.out_of_order
+
+= link_to 'Edit', edit_maci_path(@maci)
+\|
+= link_to 'Back', macis_path
