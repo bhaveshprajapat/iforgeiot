@@ -1,4 +1,4 @@
-= form_for @maci do |f|
+= form_for @maci, authenticity_token: true do |f|
   - if @maci.errors.any?
     #error_explanation
       %h2= "#{pluralize(@maci.errors.count, "error")} prohibited this maci from being saved:"
